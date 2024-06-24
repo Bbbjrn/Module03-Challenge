@@ -36,6 +36,18 @@ const collectEmployees = function () {
     addEmployees = confirm("Do you want to add more employees?");
 
   }
+
+  //Sort employeesArray by employeeLastName using .sort()
+  employees.sort((a, b) => {
+    if (a.lastName < b.lastName) {
+      return -1;
+    }
+    if (a.lastName > b.lastName) {
+      return 1;
+    }
+    return 0;
+  });
+
   return employees;
 
 };
@@ -44,12 +56,16 @@ const collectEmployees = function () {
 // TODO: Calculate and display the average salary
 const displayAverageSalary = function (employeesArray) {
   let sumSalary = 0;
+  
   //Use .forEach method to target and execute for each array element
   employeesArray.forEach(employee => {
     sumSalary += employee.salary;
   });
-  
+  //Calculate average by dividing sumSalary by the total employees number
   let averageSalary = sumSalary / employeesArray.length;
+  //Display average salary
+  //Use Fixed() to format the Salary notation 
+  console.log("Average Salary:", averageSalary.toFixed(2));
 };
 
 // Select a random employee
