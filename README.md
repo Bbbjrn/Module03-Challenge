@@ -42,9 +42,7 @@ Follow these steps to use the Employee Payroll Tracker:
 
 Here is a screenshot of the application in action:
 
-```md
-![Employee Payroll Tracker](assets/EmployeePayrollTracker.png)
-```
+![Module03-Challenge](/assets/EmployeePayrollTracker.jpg)
 
 ## License
 
