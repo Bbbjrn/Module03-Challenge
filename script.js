@@ -66,7 +66,7 @@ const getRandomEmployee = function (employeesArray) {
     alert("No employee to draw. Enter employees");
     return;
   }
-  //Generate random number for Array using Mathgit 
+  //Generate random number for Array using Math 
   const randomDraw = Math.floor(Math.random()*employeesArray.length);
   const randomEmployee = employeesArray[randomDraw];
 
