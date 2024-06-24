@@ -70,7 +70,7 @@ const getRandomEmployee = function (employeesArray) {
   const randomDraw = Math.floor(Math.random()*employeesArray.length);
   const randomEmployee = employeesArray[randomDraw];
 
-  console.log(`Congratulations to${randomEmployee.firstName}${randomEmployee.lastName}, our random drawing winner!`);
+  console.log(`Congratulations to ${randomEmployee.firstName}${randomEmployee.lastName}, our random drawing winner!`);
 };
 
 /*
