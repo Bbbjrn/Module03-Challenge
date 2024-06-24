@@ -44,9 +44,12 @@ const collectEmployees = function () {
 // TODO: Calculate and display the average salary
 const displayAverageSalary = function (employeesArray) {
   let sumSalary = 0;
+  //Use .forEach method to target and execute for each array element
   employeesArray.forEach(employee => {
-    sumSalary
-  })
+    sumSalary += employee.salary;
+  });
+  
+  let averageSalary = sumSalary / employeesArray.length;
 };
 
 // Select a random employee
