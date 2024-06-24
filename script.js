@@ -4,9 +4,39 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 // TODO: Get user input to create and return an array of employee objects
 const collectEmployees = function () {
+
   let employees = [];
   let addEmployees = true;
 
+  while (addEmployees) {
+    alert ("Input employee Firstname, Lastname, and Salary");
+
+    //Define alerts
+    let employeeFirstName = prompt("Input Firstname");
+    let employeeLastName = prompt("Input Lastname");
+    let employeeSalary = prompt("Input Salary");
+
+    //Define object
+    if (employeeFirstName && employeeLastName && !isNaN(employeeSalary)) {
+      let employee = {
+        firstName: employeeFirstName,
+        lastName: employeeLastName,
+        salary: parseFloat(employeeSalary),
+      };
+
+      //Add object to array
+      employees.push(employee);
+
+    } else {
+      alert("Invalid input, use alphanumerics for names and a number for salary");
+      continue;
+    }
+
+    //Confirm for continued input 
+    addEmployees = confirm("Do you want to add more employees?");
+
+  }
+  return employees;
 
 };
 
