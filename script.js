@@ -36,7 +36,6 @@ const collectEmployees = function () {
     //Confirm for continued input 
     addEmployees = confirm("Do you want to add more employees?");
   }
-  
   return employees;
 
 };
@@ -62,10 +61,16 @@ const displayAverageSalary = function (employeesArray) {
 // Select a random employee
 // TODO: Select and display a random employee
 const getRandomEmployee = function (employeesArray) {
-  //If loop so 
+  //If loop if no info is inputed
   if (employeesArray.length === 0) {
-    alert 
+    alert("No employee to draw. Enter employees");
+    return;
   }
+
+  const randomDraw = Math.floor(Math.random()*employeesArray.length);
+  const randomEmployee = employeesArray[randomDraw];
+
+  console.log("Congratulations to" + randomEmployee.FirstName + randomEmployee.LastName + ", our random drawing winner!");
 };
 
 /*
