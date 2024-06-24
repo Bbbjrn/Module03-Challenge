@@ -18,7 +18,7 @@ const collectEmployees = function () {
     let employeeSalary = prompt("Input Salary");
 
     //Define object
-    if (employeeFirstName && employeeLastName && !isNaN(employeeSalary)) {
+    if (isNaN(employeeFirstName) && isNaN(employeeLastName) && !isNaN(employeeSalary)) {
       let employee = {
         firstName: employeeFirstName,
         lastName: employeeLastName,
@@ -70,7 +70,7 @@ const getRandomEmployee = function (employeesArray) {
   const randomDraw = Math.floor(Math.random()*employeesArray.length);
   const randomEmployee = employeesArray[randomDraw];
 
-  console.log(`Congratulations to${randomEmployee.FirstName}${randomEmployee.LastName}, our random drawing winner!`);
+  console.log(`Congratulations to${randomEmployee.firstName}${randomEmployee.lastName}, our random drawing winner!`);
 };
 
 /*
